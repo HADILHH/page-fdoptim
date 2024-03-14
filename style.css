@@ -1,0 +1,156 @@
+body{
+    background:#020410;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 80vh; /* تعديل الارتفاع بوحدة النسبة المئوية */
+    background: url('e.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden; /* تجنب تسرب الصورة خارج الصندوق */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* تأكد من وجود العناصر الموجودة بداخله موضوعة بشكل صحيح */
+}
+.content {
+    text-align: center; /* محاذاة المحتوى بالوسط */
+    margin-bottom: 50px; /* هامش من الأسفل للتحكم في المسافة بين المحتوى والعناصر التالية */
+}
+.container .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    background: transparent;
+    padding: 20px;
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(161, 161, 161);
+    overflow: auto; /* إضافة شريط تمرير للنصوص الزائدة */
+    text-align: justify; /* جعل النص يملؤ الصندوق بشكل جميل */
+    line-height: 1.5; /* زيادة المسافة بين الأسطر لتحسين القراءة */
+    font-size: 36px; /* تحديد حجم الخط */
+}
+
+.content .logo {
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}   
+.text-sci {
+    margin-bottom: 200px; /* جعل الكلمة تصعد للأعلى */
+}
+.logo-img {
+    width: 100px; /* تحديد عرض الصورة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    margin-bottom: 20px; /* توسيع المسافة بين الصورة والنص */
+}
+
+
+.text-sci h2 {
+    font-size: 45px; /* زيادة حجم النص */
+    margin-bottom: 10px;
+}
+
+.text-sci h2 span {
+    font-size: 60%; /* زيادة حجم النص الفرعي */
+    margin-top: -5px;
+}
+
+.text-sci p {
+    font-size: 25px; /* زيادة حجم الفقرة */
+    margin: 10px 0;
+    
+}
+.text-sci p span {
+    display: inline-block;
+    margin: 0 70px; /* يمكنك ضبط هذا الرقم حسب المسافة المطلوبة */
+}
+
+
+.container .logreg-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+}
+.logreg-box .form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter:blur(20px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+    color: #fffdfd;
+}
+.form-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+.form-box .input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom: 2px solid #fffdfd;
+    margin: 30px 0;
+
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size:16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding-right: 28px;
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+
+}
+.input-box input:focus+label,
+.input-box input:valid+label {
+    top: -5px;
+
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #e94b01;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size:16px;
+    color: #e4e4e4;
+    font-weight: 500;
+    box-shadow: 0 0 10px #020410(0,0,0,.5);
+}
